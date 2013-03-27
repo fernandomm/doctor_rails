@@ -51,7 +51,7 @@ module DoctorRails
       end
 
       def get_checks
-        methods.select{|n| n.to_s.match('check_') && !n.to_s.match('_description')}
+        action_methods.select{|n| n.to_s.match('check_') && !n.to_s.match('_description')}
       end
   end
 end

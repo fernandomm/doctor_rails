@@ -32,25 +32,23 @@ And in config/routes.rb:
 Now, create your checks. Any method that starts with check_ will be run:
 
 	class ChecksController < DoctorRails::ChecksController
-	  protected
-	    def check_always_work
-	      # Do something here
-	      true
-	    end
+    def check_always_work
+      # Do something here
+      true
+    end
 	end
 
 Optionally, you may want to add a description to this check:
 
 	class ChecksController < DoctorRails::ChecksController
-	  protected
-	    def check_always_work
-	      # Do something here
-	      true
-	    end
+    def check_always_work
+      # Do something here
+      true
+    end
 
-	    def check_always_work_description
-	      "Always work :)"
-	    end
+    def check_always_work_description
+      "Always work :)"
+    end
 	end
 
 If you access http://localhost:3000/checks.json you will get the following json:
